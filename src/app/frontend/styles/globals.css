@@ -1,0 +1,65 @@
+
+@import "tailwindcss";
+@import "tw-animate-css";
+
+
+:root{
+--primary: #123d58;
+--accent: #d46d85;
+--soft: #f7d0d7;
+--muted: #6f7f89;
+--bg: #f2f5f7;
+--card: #ffffff;
+}
+
+@layer base {
+  :root {
+    --background: var(--bg);
+    --foreground: var(--primary);
+
+    --primary-foreground: #ffffff;
+
+    --muted: #e5eaee;
+    --muted-foreground: #6f7f89;
+
+    --border: #dbe2e8;
+    --ring: rgba(18, 61, 88, 0.3);
+  }
+
+  body {
+    background: var(--background);
+    color: var(--foreground);
+  }
+}
+
+html, body {
+height: 100%;
+background: var(--bg);
+color: var(--primary);
+-webkit-font-smoothing: antialiased;
+}
+
+/* small helpers to match original design */
+.text-muted{ color: var(--muted) }
+.bg-card{ background: var(--card) }
+.shadow-md-custom{ box-shadow: 0 10px 30px rgba(18,61,88,0.08) }
+.shadow-sm-custom{ box-shadow: 0 4px 10px rgba(18,61,88,0.05) }
+
+
+/* responsive tweaks */
+@media (max-width: 980px) {
+  .container-1200 {
+    padding: 0 16px;
+  }
+}
+
+.font-montserrat { font-family: var(--font-montserrat), sans-serif; }
+.font-libre { font-family: var(--font-libre), serif; }
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  scrollbar-width: none;
+}
